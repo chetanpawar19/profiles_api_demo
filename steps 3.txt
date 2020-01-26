@@ -1,0 +1,29 @@
+#create virtual env in virtual server vagrant
+-vagrant@ubuntu-bionic:/vagrant$ python -m venv ~/venv
+#activate env
+-vagrant@ubuntu-bionic:/vagrant$ source ~/venv/bin/activate
+
+-create requirement.txt file in project root & write
+
+#install packages from requirement.txt
+-git bash>(venv) vagrant@ubuntu-bionic:/vagrant$ pip install -r requirements.txt
+
+# here . is current location in root. it will create project inside root directory-local project workspace & virtual server
+
+-(venv) vagrant@ubuntu-bionic:/vagrant$ django-admin startproject profiles_project .
+
+-(venv) vagrant@ubuntu-bionic:/vagrant$ python manage.py startapp profiles_api
+
+-update INSTALLED_APPS variable in settings.py
+  'rest_framework',
+  'rest_framework.authtoken',
+  'profiles_api',
+
+-(venv) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+-http://localhost:8000/
+
+
+
+
+
+ 

@@ -34,3 +34,8 @@ git bash prompt>$ vagrant ssh
 -vagrant@ubuntu-bionic:/vagrant$ ls
 -vagrant@ubuntu-bionic:/vagrant$ python hello.py
 
+#put files in git. open new git bash in local project dir
+$ git add .
+$ git commit -m "configured vagrant and hello.py"
+$ git push origin
+
